@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#03091e">
+<title>MDA Universe</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="stars"></div>
+<section id="authView" class="auth-shell">
+  <header class="landing-nav">
+    <a class="brand" href="#"><span class="brand-star">✦</span><span>MDA<small>UNIVERSE</small></span></a>
+    <nav><a class="active" href="#authView">⌂ <span>Beranda</span></a><a href="#features">▦ <span>Fitur</span></a><a href="#community">♟ <span>Komunitas</span></a><a href="#help">? <span>Bantuan</span></a></nav>
+    <button id="themeLanding" class="round-btn" aria-label="Ganti tema">☾</button>
+  </header>
+  <main class="landing-main">
+    <section class="welcome-visual">
+      <div class="planet"></div><div class="castle"></div>
+      <div class="welcome-copy">
+        <p class="eyebrow">SELAMAT DATANG DI</p>
+        <h1>MDA <span>Universe!</span></h1>
+        <p class="lead">Jelajahi dunia tanpa batas,<br>bersama komunitas terbaik!</p>
+        <div class="perks"><span>⚡ <b>Akses cepat</b><small>Tanpa batas</small></span><span>🛡 <b>Lebih aman</b><small>Akun pribadi</small></span><span>✦ <b>Komunitas</b><small>Teman baru</small></span></div>
+        <blockquote>“Bergabunglah dan buat duniamu sendiri di MDA Universe.”<small>— MDA Universe Team</small></blockquote>
+      </div>
+    </section>
+    <section class="auth-card login-card">
+      <div class="card-logo"><span class="brand-star">✦</span><b>MDA<small>UNIVERSE</small></b></div>
+      <h2>Login ke Akun Anda</h2><p class="muted center">Masuk untuk melanjutkan perjalananmu</p>
+      <form id="loginForm">
+        <label class="field"><span>✉</span><input id="loginEmail" type="email" autocomplete="email" placeholder="Email" required></label>
+        <label class="field"><span>♙</span><input id="loginPassword" type="password" autocomplete="current-password" placeholder="Password" required minlength="6"><button type="button" class="reveal" data-target="loginPassword">◉</button></label>
+        <div class="form-row"><label class="check"><input id="remember" type="checkbox"> Ingat saya</label><button type="button" class="text-btn" id="forgotPassword">Lupa password?</button></div>
+        <button class="primary-btn" id="loginSubmit">⇥　Login Sekarang　→</button>
+      </form>
+      <div class="or"><span>atau</span></div>
+      <p class="switch center">Belum punya akun? <button class="link-btn" id="showRegister">Daftar sekarang →</button></p>
+      <p class="message" id="loginMessage"></p>
+    </section>
+    <section class="auth-card register-card" id="registerCard">
+      <div class="free-tag">✦ Daftar Gratis!</div><h2>Buat Akun Baru</h2><p class="muted">Bergabunglah dengan MDA Universe<br>dan nikmati fitur komunitas.</p>
+      <form id="registerForm">
+        <label class="field"><span>♟</span><input id="regUsername" placeholder="Username" required minlength="3" maxlength="24" pattern="[A-Za-z0-9_]+" title="Gunakan huruf, angka, atau garis bawah"></label>
+        <label class="field"><span>✉</span><input id="regEmail" type="email" placeholder="Email" required></label>
+        <label class="field"><span>♙</span><input id="regPassword" type="password" placeholder="Password (minimal 6 karakter)" required minlength="6"><button type="button" class="reveal" data-target="regPassword">◉</button></label>
+        <label class="field"><span>♙</span><input id="regConfirm" type="password" placeholder="Konfirmasi password" required minlength="6"></label>
+        <label class="check terms"><input id="agree" type="checkbox" required> Saya setuju dengan aturan komunitas.</label>
+        <button class="primary-btn" id="registerSubmit">♟　Daftar Sekarang　→</button>
+      </form>
+      <p class="switch center">Sudah punya akun? <button class="link-btn" id="showLogin">Login di sini →</button></p>
+      <p class="message" id="registerMessage"></p>
+    </section>
+  </main>
+  <footer class="landing-footer"><a class="brand" href="#"><span class="brand-star">✦</span><span>MDA<small>UNIVERSE</small></span></a><span>© 2026 MDA Universe · Made for the community</span><span>✦　◉　♪</span></footer>
+</section>
+
+<section id="appView" class="app-shell hidden">
+  <aside class="sidebar">
+    <a class="brand side-brand" href="#"><span class="brand-star">✦</span><span>MDA<small>UNIVERSE</small></span></a>
+    <div class="side-nav">
+      <button class="selected" data-page="home">⌂ <span>Beranda</span></button>
+      <button data-page="games">🎮 <span>Mini Games</span></button>
+      <button data-page="friends">♟ <span>Teman & Komunitas</span></button>
+      <button data-page="chat">✉ <span>Pesan / Chat</span></button>
+      <button data-page="profile">◎ <span>Profil Saya</span></button>
+    </div>
+    <div class="side-bottom"><small>LAINNYA</small><button data-page="help">ⓘ　 Bantuan</button><button id="logout">⇥　 Keluar</button><div class="mini-brand">✦ MDA Universe<br><small>“Simpan • Bagikan • Ceritakan”</small></div></div>
+  </aside>
+  <main class="main-area">
+    <header class="app-top"><label class="search">⌕ <input id="globalSearch" placeholder="Cari pemain atau fitur..." autocomplete="off"></label><div class="user-tools"><span id="connection" class="connection">Menghubungkan...</span><button class="round-btn" id="themeToggle">☾</button><button class="profile-chip"><span class="avatar" id="myAvatar">M</span><span><b id="myName">Pemain</b><small><i class="status-dot"></i> <span id="myStatus">Online</span></small></span></button></div></header>
+    <div id="pageContent" class="page-content"></div>
+  </main>
+</section>
+<div id="toast" class="toast"></div>
+<script type="module" src="app.js"></script>
+</body></html>
